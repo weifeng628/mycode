@@ -10,9 +10,10 @@
         "CORE_PATH",
        
         //系统常量
-       
         "MODULE_NAME",
-       
+        
+       "C('DB_PREFIX')",
+
         // 自定义常量
         "IS_APP",
         //项目中C函数默认获取到的配置键名

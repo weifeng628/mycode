@@ -1,0 +1,19 @@
+{
+	"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
+
+	"completions":
+	[
+		// 定义css
+		"__HOME_CSS__",
+		
+		// 定义js
+		"__HOME_JS__",
+		
+		// 定义images
+		"__HOME_IMAGES__",
+		
+		//定义其他
+		{ "trigger": "cla", "contents": "<?php\nnamespace ${1:Home}\\Controller;\nuse Common\\Controller\\\\${2:Home}BaseController;\n/**\n * ${3:ControllerName}\n */\nclass ${4:Name}Controller extends ${2:Home}BaseController{\n\t/**\n\t * ${5:ActionName}\n\t */\n\tpublic function index(){\n\t\t${6:}\n\t\t\\$this->display();\n\t}\n\n}" },
+		
+	]
+}

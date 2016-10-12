@@ -14,18 +14,16 @@
         
        "C('DB_PREFIX')",
 
-        // 自定义常量
-        "IS_APP",
-        //项目中C函数默认获取到的配置键名
-        "APP_FILE_CASE",
        
         // 其他
 
         // 控制器类操作
+      
+        
         { "trigger": "dump", "contents": "dump(${1:\\$data});${2:die;}$0" },
        
         // 模型类操作
-        { "trigger": "this", "contents": "\\$this${1:\n    }$0" },
+        { "trigger": "this", "contents": "\\$this${1:\n}$0" },
  
         { "trigger": "m_val", "contents": "// 自动验证\nprotected \\$_validate=array(\n    array('verify','require','验证码必填！'), //默认情况下用正则进行验证\n    array('name','','帐号名称已经存在！',0,'unique',1), // 在新增的时候验证name字段是否唯一\n    array('value',array(1,2,3),'值的范围不正确！',2,'in'), // 当值不为空的时候判断是否在一个范围内\n    array('repassword','password','确认密码不正确',0,'confirm'), // 验证确认密码是否和密码一致\n    array('password','checkPwd','密码格式不正确',0,'function'), // 自定义函数验证密码格式\n);\n$0" },
 

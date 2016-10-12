@@ -1,0 +1,38 @@
+{
+	"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
+
+	"completions":
+	[
+		// 定义css
+		"__HOME_CSS__",
+		
+		// 定义js
+		"__HOME_JS__",
+		
+		// 定义images
+		"__HOME_IMAGES__",
+		
+		//全局变量
+		"{\\$site_name}", 			//站点名称            
+		"{\\$site_host}",             
+		"{\\$site_root}",   			//安装目录                
+		"{\\$site_icp}",     			//备案信息             
+		"{\\$site_admin_email}",   	//管理员邮箱      
+		"{\\$site_tongji}",          //页面统计代码     
+		"{\\$site_seo_title}",       //SEO标题
+		"{\\$site_seo_keywords}",    //SEO关键字
+		"{\\$site_seo_description}", //SEO描述
+		"{\\$site_copyright}",       //版权信息	
+		//模板常量
+		"__ROOT__",  //网站根目录
+		"__TMPL__",   //当前模板根目录
+		"__PUBLIC__", //public 目录，不带/
+
+		
+		{ "trigger": "dtime", "contents": "{$vo.createtime|date='Y-m-d',###}" },
+		
+                  			
+	                  	 
+		
+	]
+}

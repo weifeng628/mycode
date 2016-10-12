@@ -15,5 +15,12 @@
 		//定义其他
 		{ "trigger": "cla", "contents": "<?php\nnamespace ${1:Home}\\Controller;\nuse Common\\Controller\\\\${2:Home}BaseController;\n/**\n * ${3:ControllerName}\n */\nclass ${4:Name}Controller extends ${2:Home}BaseController{\n\t/**\n\t * ${5:ActionName}\n\t */\n\tpublic function index(){\n\t\t${6:}\n\t\t\\$this->display();\n\t}\n\n}" },
 		
+		{ "trigger": "dtime", "contents": "{$vo.createtime|date='Y-m-d',###}" },
+		{ "trigger": "php", "contents": "<php>$0</php>" },
+		// 判断性别
+		{ "trigger": "status", "contents": "<php>$status=array('0'=>'待审核,'1'=>'已审核')</php> {\\$status[$vo['status']]}"},
+                  			
+	                  	 
+		
 	]
 }

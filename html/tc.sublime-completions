@@ -30,6 +30,9 @@
 
 		
 		{ "trigger": "dtime", "contents": "{$vo.createtime|date='Y-m-d',###}" },
+		{ "trigger": "tc_volist", "contents": "<volist name=\"$1\" id=\"$2\"></volist>" },
+		{ "trigger": "tc_if", "contents": "	<if condition=\"$1\">\n$2$val\n<else />\n$3$val2\n</if>" },
+			
 		
                   			
 	                  	 

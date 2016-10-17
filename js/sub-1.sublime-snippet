@@ -1,0 +1,13 @@
+
+<snippet>
+    <content><![CDATA[str.substring(0,str.length-1);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>substring-1</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>去掉字符串的最后一位 </description>
+</snippet>
+
+
+

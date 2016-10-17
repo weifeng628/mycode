@@ -1,0 +1,10 @@
+
+<snippet>
+	<content><![CDATA[\$model->where('id=1')->setInc('counts',$value);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>setInc</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+    <description>在上一次的基础上递增几</description>
+</snippet>

@@ -1,8 +1,8 @@
 
 <snippet>
 	<content><![CDATA[
-	$comments_model=M('');
-  	$db_prefix=C('DB_PREFIX');
+	\$comments_model=M('');
+  	\$db_prefix=C('DB_PREFIX');
 	\$user_comments=\$comments_model
 	->field('u.*,d.service_name')
 	->table(\$db_prefix.'user_comments as u')

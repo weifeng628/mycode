@@ -1,0 +1,17 @@
+
+<snippet>
+	<content><![CDATA[
+         \$upload = new \Think\Upload();// 实例化上传类
+         \$upload->maxSize   =     3145728 ;// 设置附件上传大小
+         \$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');
+         // 设置附件上传类型
+         \$upload->rootPath  =     './'.C("UPLOADPATH"); // 设置附件上传根目录
+         \$upload->savePath  =     './organ/'; // 设置附件上传（子）目录
+         \$info   =   $upload->upload();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>upload-img</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+    <description>上传图片类操作</description>
+</snippet>

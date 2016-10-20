@@ -1,0 +1,14 @@
+{
+    "scope": "source.php - variable.other.php",
+
+    "completions":
+    [
+       
+    //常用的函数 
+        
+     { "trigger": "tc_page", "contents": "\\$data=sp_sql_page(${1:numb});" },
+       
+     
+       
+    ]
+}

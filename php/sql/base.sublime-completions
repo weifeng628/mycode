@@ -1,0 +1,29 @@
+{
+    "scope": "source.php - variable.other.php",
+
+    "completions":
+    [
+        //预定义常量
+        "URL_COMMON",
+       
+        //路径常量
+        "CORE_PATH",
+       
+        //系统常量
+        "MODULE_NAME",
+        
+       "C('DB_PREFIX')",
+
+       
+
+        //sql常用操作
+      
+       // in的表达式 
+        { "trigger": "array-in", "contents": "\\$where['id']=array('in',array('1','3102','338'));$0 " },
+       
+     
+ 
+ 
+       
+    ]
+}

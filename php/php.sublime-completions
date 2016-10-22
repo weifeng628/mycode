@@ -33,6 +33,8 @@
         { "trigger": "result", "contents": "if(\\$result){\n    // 操作成功\n    \\$this->success('${1:info}',U('${2:}'));$0\n}else{\n    // 操作失败\n    \\$this->error('${3:name}');\n}$0" },
         { "trigger": "->add", "contents": "->add(${1:\\$data});$0" },
         { "trigger": "->addData", "contents": "->addData(${1:\\$data});$0"},
+        { "trigger": "full-url", "contents": "'http://'.\\$_SERVER['SERVER_NAME'].C('UPLOADPATH').${1:\\$arr['thumb']}"}, 
+       
        
     ]
 }

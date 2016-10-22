@@ -19,7 +19,7 @@
         //sql常用操作
       
        // in的表达式 
-        { "trigger": "array-in", "contents": "\\$where['id']=array('in',array('1','3102','338'));$0 " },
+        { "trigger": "array_in", "contents": "\\$where['id']=array('in',array('1','3102','338'));$0 " },
        
      
  

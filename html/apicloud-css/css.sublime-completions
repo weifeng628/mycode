@@ -1,0 +1,12 @@
+{
+	"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
+
+	"completions":
+	[
+		
+		//栅格去边框
+		{ "trigger": "sg-noborder", "contents": ".amount-info .aui-col-xs-4:first-child:after{ border:none;}" },
+		
+	
+	]
+}

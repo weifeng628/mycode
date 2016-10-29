@@ -1,0 +1,35 @@
+
+<snippet>
+    <content><![CDATA[function UpdatePhoto(idName) {
+    api.actionSheet({
+        cancelTitle : '取消',
+        buttons : ['拍照', '打开相册']
+    }, function(ret, err) {
+        if (ret.buttonIndex == 3) {
+            return;
+        }
+        var sourceType = (ret.buttonIndex == 1) ? 'camera' : 'album';
+        api.getPicture({
+            sourceType : sourceType,
+            destinationType : 'url',
+            allowEdit : true,
+            quality : 70,
+            targetWidth : 100,
+            targetHeight : 100
+        }, function(ret, err) {
+            if (ret) {
+                var img = ret.data;
+                \$api.attr($api.byId(idName), 'src', img);
+            } else {
+                alert(JSON.stringify(err));
+            }
+        });
+    });
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>api-uploadPhoto</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>上传头像的底部弹出框代码段集合</description>
+</snippet>

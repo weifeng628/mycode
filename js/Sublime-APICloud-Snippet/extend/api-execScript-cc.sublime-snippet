@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+    //函数中字符串传参要用 ' 或 " 引起
+    // <li class="aui-col-xs-4 aui-text-center" tapmode onclick="SelectClassfiy('{{=it[i].name}}')">
+    function SelectClassfiy(name){  
+      api.execScript({
+            name: 'release_goods_win',
+            frameName: 'release_goods_frm',
+            script:'SetClassfiy("'+ name +'");'
+      });
+        api.closeWin();        
+    }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>api-execScript-cc</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>执行脚本传参的注意事项代码段</description>
+</snippet>

@@ -19,7 +19,14 @@
 
         // 控制器类操作
       
+        { "trigger": "cla", "contents": "<?php\nnamespace ${1:Home}\\Controller;\nuse Common\\Controller\\\\${2:Admin}baseController;\n/**\n * ${3:ControllerName}\n */\nclass ${4:Name}Controller extends ${2:Admin}baseController{\n\t/**\n\t * ${5:ActionName}\n\t */\n\tpublic function index(){\n\t\t${6:}\n\t\t\\$this->display();\n\t}\n\n}" },
+        { "trigger": "mod", "contents": "<?php\nnamespace Common\\Model;\nuse Common\\Model\\BaseModel;\n/**\n * ${1:ModelName}\n */\nclass ${2:Name}Model extends BaseModel{\n\n\t${3}\n\n}" },
+        { "trigger": "model", "contents": "<?php\nnamespace Common\\Model;\nuse Common\\Model\\BaseModel;\n/**\n * ${1:ModelName}\n */\nclass ${2:Name}Model extends BaseModel{\n\n\t/**\n\t * 添加数据\n\t * @param\tarray\t\\$data\t数据 \n\t * @return \tinteger\t\t\t新增数据的id \n\t */\n\tpublic function addData(\\$data){\n\t\t${4:\\$result=\\$this->add(\\$data);}\n\t\treturn \\$result;\n\t}\n\t\n\t/**\n\t * 修改数据\n\t * @param\tarray\t\\$map\twhere语句数组形式 \n\t * @param\tarray\t\\$data\t数据 \n\t * @return\tboolean\t\t\t操作是否成功\n\t */\n\tpublic function editData(\\$map,\\$data){\n\t\t\\$result=\\$this->where(\\$map)->save(\\$data);\n\t\treturn \\$result;\n\t}\n\t\n\t/**\n\t * 删除数据\n\t * @param\tarray\t\\$map\twhere语句数组形式\n\t * @return\tboolean\t\t\t操作是否成功\n\t */\n\tpublic function deleteData(\\$map){\n\t\t\\$result=\\$this->where(\\$map)->delete();\n\t\treturn \\$result;\n\t}\n\n\t/**\n\t * 传递主键id查找数据\n\t * @param\tinteger\t\\$id\t主键id\n\t * @return\tarray\t\t查找到的数据\n\t */\n\tpublic function getDataById(\\$id){\n\n\t\treturn \\$data;\n\t}\n\n}" },   
+        { "trigger": "php", "contents": "<php>$0</php>" },
+        // 判断性别
+        { "trigger": "status", "contents": "<php>$status=array('0'=>'待审核,'1'=>'已审核')</php> {\\$status[$vo['status']]}"},
         
+
         { "trigger": "dump", "contents": "dump(${1:\\$data});${2:die;}$0" },
        
         // 模型类操作
@@ -32,7 +39,7 @@
         { "trigger": "create", "contents": "// 对data数据进行验证\nif(!\\$data=\\$this->create(\\$data)){\n    // 验证不通过返回错误\n    return false;\n}else{\n    // 验证通过\n    $1\n}$0" },
         { "trigger": "result", "contents": "if(\\$result){\n    // 操作成功\n    \\$this->success('${1:info}',U('${2:}'));$0\n}else{\n    // 操作失败\n    \\$this->error('${3:name}');\n}$0" },
         { "trigger": "->add", "contents": "->add(${1:\\$data});$0" },
-        { "trigger": "full-url", "contents": "'http://'.\\$_SERVER['SERVER_NAME'].C('UPLOADPATH').${1:\\$arr['thumb']}"}, 
+        { "trigger": "full-url", "contents": "'http://'.\\$_SERVER['SERVER_NAME'].'/'.C('UPLOADPATH').${1:\\$arr['thumb']};"}, 
        
        
     ]

@@ -1,0 +1,24 @@
+
+<snippet>
+    <content><![CDATA[
+    //<img class="aui-img-object aui-pull-left" onload="fnLoadImage(this)" data-url="{{=it[i].service_img}}" src="../../image/default.png" >
+    function fnLoadImage (ele_) {
+            var imageURL = $api.attr(ele_, 'data-url');
+            if (imageURL) {
+                api.imageCache({
+                    url: imageURL
+                }, function(ret, err){
+                    if (ret.status) {
+                        ele_.src = ret.url;
+                        \$api.removeAttr(ele_, 'data-url');
+                    }
+                });
+            }
+        }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>api-imagecache</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>图片缓存的代码段</description>
+</snippet>

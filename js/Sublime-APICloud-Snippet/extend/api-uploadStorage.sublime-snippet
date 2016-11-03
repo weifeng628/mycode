@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+    userInfo = $api.getStorage('user');
+    userInfo.type = 2;
+    \$api.setStorage('user', userInfo);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>api-uploadStorage</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>更改storage中的值</description>
+</snippet>

@@ -10,10 +10,10 @@
     <script type="text/javascript">
     // 更新数据
         function fnUpdateData(data_) {
-            var apendText = $api.byId('CommentListT').text;
+            var apendText = \$api.byId('CommentListT').text;
             var fnapendText = doT.template(apendText);
             var html = fnapendText(data_);
-            var list = $api.dom('#Comment-items'); //模板中的标签id
+            var list = \$api.dom('#Comment-items'); //模板中的标签id
             \$api.append(list, html);
             api.parseTapmode();   //重要，更改dom结构后通知
             api.hideProgress();
@@ -45,7 +45,7 @@
 
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>刷新api-dot</tabTrigger>
+    <tabTrigger>api-dot</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.js</scope> -->
     <description> Dot模板操作的相关代码集合</description>

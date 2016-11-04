@@ -27,6 +27,7 @@ function checkmobile(mobile)
 
            return false; 
        } 
+       return true;
    } 
     
 ]]></content>

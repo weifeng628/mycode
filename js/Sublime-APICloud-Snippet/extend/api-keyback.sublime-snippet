@@ -1,20 +1,12 @@
 <snippet>
     <content><![CDATA[
-    api.addEventListener({
-		name : 'keyback'
-		}, function(ret, err) {
-			api.confirm({
-				title : '退出',
-				msg : '您确定退出么?',
-				buttons : ['确定', '取消']
-			}, function(ret, err) {
-				if (ret.buttonIndex == 1) {
-					api.closeWidget();
-				} else {
-					return false;
-				}
-			});
+api.addEventListener({
+	name : 'keyback'
+	}, function(ret, err) {
+	api.closeWidget({
+		silent : false
 	});
+});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>api-keyback</tabTrigger>

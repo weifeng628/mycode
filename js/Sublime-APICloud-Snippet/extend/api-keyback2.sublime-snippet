@@ -1,0 +1,31 @@
+<snippet>
+    <content><![CDATA[
+function exitApp() {
+    api.addEventListener({
+        name : 'keyback'
+    }, function(ret, err) {
+        api.toast({
+            msg : '再按一次退出' + api.appName,
+            duration : 2000,
+            location : 'bottom'
+        });
+        api.addEventListener({
+            name : 'keyback'
+        }, function(ret, err) {
+            api.closeWidget({
+                silent : true
+            });
+        }); 
+        //2秒后重新调用当前函数
+        setTimeout(function() {
+            exitApp();
+        }, 2000)
+    });
+ }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>api-keyback2</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>返回键两次退出代码,模态效果</description>
+</snippet>

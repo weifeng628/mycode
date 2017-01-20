@@ -1,52 +1,15 @@
 
 <snippet>
     <content><![CDATA[
-    <script type="text/javascript" src="../../script/doT.min.js"></script>
-    <script type="text/x-dot-template" id="CommentListT">
+<script type="text/x-dot-template" id="CommentListT">
     {{ for (var i = 0; i < it.length; i++){ }}
     <!-- 循环的内容 -->
     {{ }; }}
-    </script>
-    <script type="text/javascript">
-    // 更新数据
-        function fnUpdateData(data_) {
-            var apendText = \$api.byId('CommentListT').text;
-            var fnapendText = doT.template(apendText);
-            var html = fnapendText(data_);
-            var list = \$api.dom('#Comment-items'); //模板中的标签id
-            \$api.append(list, html);
-            api.parseTapmode();   //重要，更改dom结构后通知
-            api.hideProgress();
-        }
-    //加载数据
-        function fnLoadData(){
-            api.ajax({
-                url: 'http://192.168.100.102/index.php?g=Osapp&m=OrganManage&a=comment_list',
-                method: 'post',
-                data: {
-                    values: { 
-                        name: 'haha'
-                    },
-                    files: { 
-                        file: 'fs://a.gif'
-                    }
-                }
-            },function(ret, err){
-                if (ret) {
-                    alert( JSON.stringify( ret ) );
-                    fnUpdateData(ret);
-                } else {
-                    alert( JSON.stringify( err ) );
-                }
-            });
-        }
 </script>
-
-
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>api-dot</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.js</scope> -->
-    <description> Dot模板操作的相关代码集合</description>
+    <description> Dot模板操作书写格式</description>
 </snippet>

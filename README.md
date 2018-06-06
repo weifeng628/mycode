@@ -5,7 +5,7 @@
 
 
 ## 使用说明
-1. 请将程序直接放在Sublime 3\Data\Packages下即可正常使用.
+1. 请将程序直接放在Sublime 3\Data\Packages下即可正常使用.2
 
 
 ## 商业友好的开源协议
